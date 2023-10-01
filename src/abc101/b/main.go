@@ -14,10 +14,19 @@ func init() {
 
 func main() {
 	defer flush()
-	ans := 0
 
 	var n string
 	fmt.Scan(&n)
+
+	sum := 0
+	for i := 0; i < len(n); i++ {
+		sum += atoi(n[i : i+1])
+	}
+
+	ans := "No"
+	if atoi(n)%sum == 0 {
+		ans = "Yes"
+	}
 
 	fmt.Fprintln(wtr, ans)
 }
