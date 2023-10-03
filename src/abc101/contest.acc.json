@@ -39,7 +39,11 @@
       "id": "arc099_b",
       "label": "D",
       "title": "Snuke Numbers",
-      "url": "https://atcoder.jp/contests/abc101/tasks/arc099_b"
+      "url": "https://atcoder.jp/contests/abc101/tasks/arc099_b",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     }
   ]
 }
