@@ -13,22 +13,24 @@ var wtr = bufio.NewWriter(os.Stdout)
 
 func main() {
 	defer flush()
-	lines := getStdin()
 
-	rating := map[string]int{
-		"tourist":    3858,
-		"ksun48":     3679,
-		"Benq":       3658,
-		"Um_nik":     3648,
-		"apiad":      3638,
-		"Stonefeang": 3630,
-		"ecnerwala":  3613,
-		"mnbvmar":    3555,
-		"newbiedmy":  3516,
-		"semiexp":    3481,
+	var n int
+	fmt.Scan(&n)
+
+	ans := ""
+	for i := 0; i <= n; i++ {
+		for j := 1; j <= 9; j++ {
+			if n%j == 0 && i%(n/j) == 0 {
+				ans += itoa(j)
+				break
+			}
+		}
+		if len(ans) < i+1 {
+			ans += "-"
+		}
 	}
 
-	fmt.Fprintln(wtr, rating[lines[0]])
+	fmt.Fprintln(wtr, ans)
 }
 
 // ////////////////////////////////////////////////////////////////
