@@ -29,7 +29,11 @@
       "id": "abc319_c",
       "label": "C",
       "title": "False Hope",
-      "url": "https://atcoder.jp/contests/abc319/tasks/abc319_c"
+      "url": "https://atcoder.jp/contests/abc319/tasks/abc319_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc319_d",
