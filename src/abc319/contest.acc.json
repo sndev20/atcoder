@@ -39,7 +39,11 @@
       "id": "abc319_d",
       "label": "D",
       "title": "Minimum Width",
-      "url": "https://atcoder.jp/contests/abc319/tasks/abc319_d"
+      "url": "https://atcoder.jp/contests/abc319/tasks/abc319_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc319_e",

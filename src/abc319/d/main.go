@@ -16,8 +16,42 @@ func main() {
 	defer flush()
 	lines := getStdin()
 
-	ans := 0
-	fmt.Fprintln(wtr, ans)
+	// 入力の整形
+	n := atoi(strings.Split(lines[0], " ")[0])
+	m := atoi(strings.Split(lines[0], " ")[1])
+
+	ls := make([]int, n)
+	strs := strings.Split(lines[1], " ")
+	for i := 0; i < n; i++ {
+		ls[i] = atoi(strs[i]) + 1 // 単語の間のスペースを考慮する
+	}
+
+	lower := max(ls) - 1 // 最小の行数(単語の間のスペースを引く)
+	upper := sum(ls)     // 最大の行数
+
+	// 2分探索で求める
+	for lower+1 < upper {
+		mid := (lower + upper) / 2
+
+		row := 1 // 今の行数
+		len := 0 // 先頭から何文字目か
+
+		for i := 0; i < n; i++ {
+			len += ls[i]   // 行の末尾に追加してみる
+			if len > mid { // はみ出たら
+				row++       // 改行して
+				len = ls[i] // その単語を次の行に追加する
+			}
+		}
+
+		if row <= m { // 今の行数がm以下なら
+			upper = mid // mid以下の行数で可能
+		} else {
+			lower = mid // mid以上の行数で必要
+		}
+	}
+
+	fmt.Fprintln(wtr, upper-1) // 単語の間のスペースを引く
 }
 
 // ////////////////////////////////////////////////////////////////
