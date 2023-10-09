@@ -67,7 +67,7 @@ func sumOfEachDigit(n int) int {
 	return sum
 }
 
-// flush stdoutを初期化する
+// flush stdoutに書き込み
 func flush() {
 	e := wtr.Flush()
 	if e != nil {

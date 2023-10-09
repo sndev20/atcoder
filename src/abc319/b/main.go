@@ -43,7 +43,7 @@ func getStdin() []string {
 	return strings.Split(strings.TrimRight(string(stdin), "\n"), "\n")
 }
 
-// flush stdoutを初期化する
+// flush stdoutに書き込み
 func flush() {
 	e := wtr.Flush()
 	if e != nil {
