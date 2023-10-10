@@ -49,7 +49,11 @@
       "id": "abc319_e",
       "label": "E",
       "title": "Bus Stops",
-      "url": "https://atcoder.jp/contests/abc319/tasks/abc319_e"
+      "url": "https://atcoder.jp/contests/abc319/tasks/abc319_e",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc319_f",
