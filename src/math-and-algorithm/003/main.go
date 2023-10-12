@@ -14,10 +14,14 @@ var wtr = bufio.NewWriter(os.Stdout)
 
 func main() {
 	defer flush()
-	lines := getStdin()
+	n := nextInt()
 
-	ans := 0
-	fmt.Fprintln(wtr, ans)
+	sum := 0
+	for i := 0; i < n; i++ {
+		sum += nextInt()
+	}
+
+	fmt.Fprintln(wtr, sum)
 }
 
 // ////////////////////////////////////////////////////////////////
