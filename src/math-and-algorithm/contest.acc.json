@@ -109,7 +109,11 @@
       "id": "math_and_algorithm_k",
       "label": "011",
       "title": "Print Prime Numbers",
-      "url": "https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_k"
+      "url": "https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_k",
+      "directory": {
+        "path": "011",
+        "testdir": "tests"
+      }
     },
     {
       "id": "math_and_algorithm_l",

@@ -11,4 +11,4 @@ question=$2
 
 # コマンドの実行
 cd "./src/${name}/${question}"
-oj t -d tests -c "go run main.go"
+oj t -d tests -c "go run main.go" -N
