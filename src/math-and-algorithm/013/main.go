@@ -13,11 +13,12 @@ import (
 var wtr = bufio.NewWriter(os.Stdout)
 
 func main() {
-	defer flush()
-	lines := getStdin()
+	n := nextInt()
+	ls := enumerateDivisors(n)
 
-	ans := 0
-	fmt.Fprintln(wtr, ans)
+	for _, v := range ls {
+		fmt.Println(v)
+	}
 }
 
 // ////////////////////////////////////////////////////////////////
