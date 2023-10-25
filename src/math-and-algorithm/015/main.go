@@ -14,10 +14,11 @@ var wtr = bufio.NewWriter(os.Stdout)
 
 func main() {
 	defer flush()
-	lines := getStdin()
+	a := nextInt()
+	b := nextInt()
 
-	ans := 0
-	fmt.Fprintln(wtr, ans)
+	// 出力
+	fmt.Fprintln(wtr, findGCD(a, b))
 }
 
 // ////////////////////////////////////////////////////////////////
@@ -53,6 +54,21 @@ func min(x, y int) int {
 		return x
 	}
 	return y
+}
+
+// primeFactorization: 素因数分解
+func primeFactorization(n int) map[int]int {
+	res := map[int]int{}
+	for i := 2; i*i <= n; i++ {
+		for n%i == 0 {
+			res[i]++
+			n /= i
+		}
+	}
+	if n != 1 {
+		res[n]++
+	}
+	return res
 }
 
 // enumerateDivisors: 約数を列挙する
